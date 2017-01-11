@@ -1,0 +1,2 @@
+/* page/API/i-file/i-file.wxss */
+@import "../file/file.wxss";

@@ -1,0 +1,75 @@
+<!--index.wxml-->
+<view class="container" style="color:{{color}};background:{{background}}">
+  <include src="../header.wxml"/>
+  <include src="../header.wxml"/>
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto" style='color:blue;'>{{motto}}</text>
+  </view>
+  <view>
+    <view class="f20">you are {{who}}</view>
+    <button bindtap="setWho">who</button>
+  </view>
+  <!--<view wx:for="{{array}}" wx:for-index="idx" wx:for-item="itemName">
+    {{idx}}: {{itemName.message}}
+  </view>-->
+  <!--<view wx:for="{{[1, 2, 3, 4, 5, 6, 7, 8, 9]}}" wx:for-item="i">
+    <view wx:for="{{[1, 2, 3, 4, 5, 6, 7, 8, 9]}}" wx:for-item="j">
+      <view wx:if="{{i <= j}}">
+        {{i}} * {{j}} = {{i * j}}
+      </view>
+    </view>
+  </view>-->
+  <!--<block wx:for="{{[10, 20, 30]}}">
+    <view> {{index}}: </view>
+    <view> {{item/2}} </view>
+  </block>-->
+  <!--<switch wx:for="{{objectArray}}" wx:key="unique" style="display: block;"> {{item.id}} </switch>
+  <button bindtap="switch"> Switch </button>
+  <button bindtap="addToFront"> Add to the front </button>
+
+  <switch wx:for="{{numberArray}}" wx:key="*this" style="display: block;"> {{item}} </switch>
+  <button bindtap="addNumberToFront"> Add to the front </button>-->
+  <template name="msgItem">
+    <view>
+      <text> {{index}}: {{msg}} </text>
+      <text> Time: {{time}} </text>
+    </view>
+  </template>
+  <template is="msgItem" data="{{...item}}"/>
+  <template is="msgItem" data="{{...item2}}"/>
+  <!--<template name="odd">
+    <view> odd </view>
+  </template>
+  <template name="even">
+    <view> even </view>
+  </template>
+
+  <block wx:for="{{[1, 2, 3, 4, 5]}}">
+      <template is="{{item % 2 == 0 ? 'even' : 'odd'}}"/>
+  </block>-->
+
+  <view id="tapTest" data-hi="WeChat" data-lo="Welol" data-mu-jun="0" bindtap="tapName"> Click me! </view>
+  <view id="outter" bindtap="handleTap1">
+    outer view
+    <view id="middle" catchtap="handleTap2">
+      middle view
+      <view id="inner" bindtap="handleTap3">
+        inner view
+      </view>
+    </view>
+</view>
+
+<view bindtouchstart='touchstart'>touchstart</view>
+<view bindtouchmove='touchmove'>touchmove</view>
+<view bindtouchcancel='touchcancel'>touchcancel</view>
+<view bindtouchend='touchend'>touchend</view>
+<view bindtap='tap'>tap</view>
+<view bindlongtap='longtap'>longtap</view>
+
+<import src="../item.wxml"/>
+<template is="item" data="{{text: 'football'}}"/>
+</view>
