@@ -6,6 +6,10 @@ Page({
         zhName: '文件',
         enName: 'i-file',
         url: '../i-file/i-file'
+      },{
+        zhName: '网络请求',
+        enName: 'i-request',
+        url: '../i-request/i-request'
       }],
       opened: false
     },{

@@ -6,8 +6,12 @@
   <view class="page__bd">
     <view class="btn-area">
       <view class="body-view">
-        <loading hidden="{{hidden}}" bindchange="loadingChange">
+        <!--<loading hidden="{{hidden}}" bindchange="loadingChange">
           加载中...
+        </loading>-->
+        <loading hidden="{{hidden}}" bindchange="">
+          <view>1</view>
+          <view>2</view>
         </loading>
         <button type="default" bindtap="loadingTap">点击弹出loading</button>
       </view>

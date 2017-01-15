@@ -33,6 +33,7 @@
     "page/API/index/index",
 
     "page/API/i-file/i-file",
+    "page/API/i-request/i-request",
     
     "page/API/login/login",
     "page/API/get-user-info/get-user-info",
